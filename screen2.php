@@ -20,7 +20,7 @@
 			<div class="bell"><i class="fa fa-bell"></i></div>
 		</div>
 	</div>
-	<div class="menu">Home > Profile > Preference > Categories</div>
+	<div class="menu">Home > Profile > <a href="screen1.php">Preference</a> > Categories</div>
 	<div class="header">Top Scholarship Categories that You Pick</div>
 	<div class="bubble">
 		<?php
