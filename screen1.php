@@ -2,6 +2,7 @@
 <html>
 <head>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
 	<link rel="stylesheet" type="text/css" href="css/screen1.css">
 	<title>Screen 1</title>
 </head>
