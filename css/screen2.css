@@ -94,68 +94,6 @@ body{
 	font-size: 20pt;
 	width: 943px;
 }
-.box{
-	cursor: pointer;
-	padding: 0 15px;
-	height: 50px;
-	margin-bottom: 30px;
-	margin-top: -16px;
-	margin-right: 18px;
-	color: #545454;
-	border: 1px solid #545454;
-	border-radius: 50vh;
-	float: left;
-	line-height: 50px;
-	background-color: #FBFBFB;
-}
-.box:hover{
-	cursor: pointer;
-	padding: 0 15px;
-	height: 50px;
-	margin-bottom: 30px;
-	margin-right: 18px;
-	color: #FFFFFF;
-	border: 1px solid #2E9DA1;
-	border-radius: 50vh;
-	float: left;
-	line-height: 50px;
-	background-color: #38C4CA;
-}
-.checkbox{
-	position: absolute;
-	opacity: 0;
-	cursor: pointer;
-	height: 0;
-	width: 0;
-}
-.checkbox:checked ~ .box{
-	cursor: pointer;
-	padding: 0 15px;
-	height: 50px;
-	margin-bottom: 30px;
-	margin-right: 18px;
-	color: #FFFFFF;
-	border: 1px solid #2E9DA1;
-	border-radius: 50vh;
-	float: left;
-	line-height: 50px;
-	background-color: #38C4CA;
-}
-.done{
-	cursor: pointer;
-	text-align: center;
-	line-height: 64px;
-	padding-top: 0;
-	border: none;
-	border-radius: 6px;
-	clear: both;
-	height: 64px;
-	width: 330px;
-	font-size: 24pt;
-	font-weight: bold;
-	color: #FFFFFF;
-	background-color: #5F9BE1;
-}
 .dialog{
 	text-align: center;
 	line-height: 60px;
