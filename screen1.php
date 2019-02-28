@@ -31,6 +31,7 @@
 			font-size: 26px;
 		}
 		.search{
+			border-radius: 4px;
 			font-size: 20pt;
 			width: 788px;
 			color: #9B9B9B;
@@ -74,26 +75,27 @@
 			color: #313131;
 			font-weight: bold;
 			font-family: 'Helvetica';
-			margin-left: 307px;
+			margin-left: 264px;
 		}
 		.content{
 			margin-top: 34px;
-			width: 900px;
+			width: 943px;
 			font-size: 24pt;
 			color: #545454;
-			margin-left: 307px;
+			margin-left: 264px;
 		}
 		.bubble{
-			margin-top: 28px;
-			margin-left: 307px;
+			margin-top: 44px;
+			margin-left: 264px;
 			font-size: 20pt;
-			width: 900px;
+			width: 943px;
 		}
 		.bubble .box{
 			cursor: pointer;
 			padding: 0 15px;
 			height: 50px;
-			margin-bottom: 14px;
+			margin-bottom: 30px;
+			margin-top: -16px;
 			margin-right: 18px;
 			color: #545454;
 			border: 1px solid #545454;
@@ -106,7 +108,7 @@
 			cursor: pointer;
 			padding: 0 15px;
 			height: 50px;
-			margin-bottom: 14px;
+			margin-bottom: 30px;
 			margin-right: 18px;
 			color: #FFFFFF;
 			border: 1px solid #2E9DA1;
@@ -114,6 +116,20 @@
 			float: left;
 			line-height: 50px;
 			background-color: #38C4CA;
+		}
+		.done{
+			cursor: pointer;
+			text-align: center;
+			line-height: 64px;
+			padding-top: 0;
+			border-radius: 6px;
+			clear: both;
+			height: 64px;
+			width: 330px;
+			font-size: 24pt;
+			font-weight: bold;
+			color: #FFFFFF;
+			background-color: #5F9BE1;
 		}
 	</style>
 </head>
@@ -145,6 +161,7 @@
 		<?php
 			}
 		?>
+		<div class="done">Done</div>
 	</div>
 </body>
 </html>
