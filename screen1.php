@@ -62,6 +62,27 @@
 			margin: 0 65px 0 0; 
 			font-size: 26px;
 		}
+		.menu{
+			margin-top: 18px;
+			margin-left: 48px;
+			color: #B2B0B0;
+			font-size: 20pt;
+		}
+		.header{
+			margin-top: 24px;
+			font-size: 36pt;
+			color: #313131;
+			font-weight: bold;
+			font-family: 'Helvetica';
+			margin-left: 307px;
+		}
+		.content{
+			margin-top: 34px;
+			width: 800px;
+			font-size: 24pt;
+			color: #545454;
+			margin-left: 307px;
+		}
 	</style>
 </head>
 <body>
@@ -79,5 +100,8 @@
 			<div class="bell"><i class="fa fa-bell"></i></div>
 		</div>
 	</div>
+	<div class="menu">Home > Profile > Preference</div>
+	<div class="header">Personalize your Schoters homepage</div>
+	<div class="content">Pick 5 top scholarship categories that you are interested to help us deliver the most relevant information with your preferences</div>
 </body>
 </html>
