@@ -78,10 +78,42 @@
 		}
 		.content{
 			margin-top: 34px;
-			width: 800px;
+			width: 900px;
 			font-size: 24pt;
 			color: #545454;
 			margin-left: 307px;
+		}
+		.bubble{
+			margin-top: 28px;
+			margin-left: 307px;
+			font-size: 20pt;
+			width: 900px;
+		}
+		.bubble .box{
+			cursor: pointer;
+			padding: 0 15px;
+			height: 50px;
+			margin-bottom: 14px;
+			margin-right: 18px;
+			color: #545454;
+			border: 1px solid #545454;
+			border-radius: 50vh;
+			float: left;
+			line-height: 50px;
+			background-color: #FBFBFB;
+		}
+		.bubble .box:hover{
+			cursor: pointer;
+			padding: 0 15px;
+			height: 50px;
+			margin-bottom: 14px;
+			margin-right: 18px;
+			color: #FFFFFF;
+			border: 1px solid #2E9DA1;
+			border-radius: 50vh;
+			float: left;
+			line-height: 50px;
+			background-color: #38C4CA;
 		}
 	</style>
 </head>
@@ -103,5 +135,16 @@
 	<div class="menu">Home > Profile > Preference</div>
 	<div class="header">Personalize your Schoters homepage</div>
 	<div class="content">Pick 5 top scholarship categories that you are interested to help us deliver the most relevant information with your preferences</div>
+	<div class="bubble">
+		<?php
+			$json = file_get_contents('https://private-90552-schoterspersonal.apiary-mock.com/categories');
+	        $obj = json_decode($json);
+	        foreach ($obj as $o) {
+		?>
+			<div class="box"><?php echo $o->name; ?></div>
+		<?php
+			}
+		?>
+	</div>
 </body>
 </html>
