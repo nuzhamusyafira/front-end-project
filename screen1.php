@@ -5,6 +5,16 @@
 	<title>Screen 1</title>
 	<style type="text/css">
 		@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+		@mixin hidden-content() {
+			border: none;
+			clip: rect(0 0 0 0);
+			height: 1px;
+			margin: -1px;
+			overflow: hidden;
+			padding: 0;
+			position: absolute;
+			width: 1px;
+		}
 		body{
 			margin: 0;
 			min-width: 1488px;
@@ -36,7 +46,7 @@
 			width: 788px;
 			color: #9B9B9B;
 			height: 50px;
-			border-color: #979797;
+			border: solid #979797;
 			padding-left: 12px;
 			margin-top: 14px;
 			margin-right: 156px;
@@ -90,7 +100,7 @@
 			font-size: 20pt;
 			width: 943px;
 		}
-		.bubble .box{
+		.box{
 			cursor: pointer;
 			padding: 0 15px;
 			height: 50px;
@@ -104,7 +114,27 @@
 			line-height: 50px;
 			background-color: #FBFBFB;
 		}
-		.bubble .box:hover{
+		.box:hover{
+			cursor: pointer;
+			padding: 0 15px;
+			height: 50px;
+			margin-bottom: 30px;
+			margin-right: 18px;
+			color: #FFFFFF;
+			border: 1px solid #2E9DA1;
+			border-radius: 50vh;
+			float: left;
+			line-height: 50px;
+			background-color: #38C4CA;
+		}
+		.checkbox{
+			position: absolute;
+			opacity: 0;
+			cursor: pointer;
+			height: 0;
+			width: 0;
+		}
+		.checkbox:checked ~ .box{
 			cursor: pointer;
 			padding: 0 15px;
 			height: 50px;
@@ -122,6 +152,7 @@
 			text-align: center;
 			line-height: 64px;
 			padding-top: 0;
+			border: none;
 			border-radius: 6px;
 			clear: both;
 			height: 64px;
@@ -130,6 +161,21 @@
 			font-weight: bold;
 			color: #FFFFFF;
 			background-color: #5F9BE1;
+		}
+		.dialog{
+			text-align: center;
+			line-height: 60px;
+			position: fixed;
+			font-size: 25px;
+			color: #FFFFFF;
+			bottom: 40px;
+			right: 65px;
+			width: 60px;
+			height: 60px;
+			border-radius: 50%;
+			cursor: pointer;
+			background-color: #178FDD;
+			border: solid #0B5789;
 		}
 	</style>
 </head>
@@ -152,16 +198,24 @@
 	<div class="header">Personalize your Schoters homepage</div>
 	<div class="content">Pick 5 top scholarship categories that you are interested to help us deliver the most relevant information with your preferences</div>
 	<div class="bubble">
-		<?php
-			$json = file_get_contents('https://private-90552-schoterspersonal.apiary-mock.com/categories');
-	        $obj = json_decode($json);
-	        foreach ($obj as $o) {
-		?>
-			<div class="box"><?php echo $o->name; ?></div>
-		<?php
-			}
-		?>
-		<div class="done">Done</div>
+		<form name="search-form" action="screen2.php" method="post">
+			<?php
+				$json = file_get_contents('https://private-90552-schoterspersonal.apiary-mock.com/categories');
+		        $obj = json_decode($json);
+		        foreach ($obj as $o) {
+			?>
+			<label>
+				<input class="checkbox" type="checkbox" name="check[]" value="<?php echo $o->id; ?>">
+				<div class="box"><?php echo $o->name; ?></div>
+			</label>
+			<?php
+				}
+			?>
+			<div class="done" onclick="document.forms['search-form'].submit();">Done</div>
+		</form>
+	</div>
+	<div class="dialog">
+		<i class="fas fa-comment"></i>
 	</div>
 </body>
 </html>
